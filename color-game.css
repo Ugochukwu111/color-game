@@ -1,0 +1,146 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  font-family: Arial, sans-serif; /* Sets a default font */
+  font-size: 16px; /* Sets a readable font size */
+  line-height: 1.5; /* Improves text readability */
+  color: #333; /* Sets a neutral text color */
+  background-color: #f8f9fa;
+  min-height: 100svh;
+  background-color: bisque;
+  background-image: url(images/color-game-background-image.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+button{
+  padding: .7em 1.2em;
+  border-radius: 2rem;
+  border: none;
+  background-color: black;
+  color: #f8f9fa;
+  font-weight: 700;
+  font-family: monospace;
+  transition: all 200ms ease;
+}
+
+
+
+button:active{
+  transform: scale(.8);
+}
+
+.score-num{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.js-lose{
+  color: red;
+}
+.js-win{
+  color: green;
+}
+
+.score-container{
+  display: flex;
+  justify-content: space-between;
+  padding: .5em ;
+  width: 100%;
+  align-items: center;
+  max-width: 33rem;
+  border: 2px solid black;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.game-container-holder{
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100svh;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-container{
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 33rem;
+  padding: 1em;
+
+}
+
+.emoji-reaction-box{
+  background-color: transparent;
+  padding: .1em;
+  position:absolute;
+  z-index: 999;
+  right: 2rem;
+  transition: all 300ms ease;
+  transform: translateY(100rem);
+  
+}
+
+.target-color-box{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.009);
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.target-color-box >*{
+  width: 5.5rem;
+  aspect-ratio: 1;
+  background-color: green;
+}
+
+.one-option-box{
+  aspect-ratio:  1/.6;
+  background-color: blue;
+  border-radius: .5rem;
+  transition: all 150ms ease-in ;
+}
+
+/* .one-option-box:hover, */
+.one-option-box:hover{
+  transform: scale(1.1);
+}
+
+
+.options-box{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.button-box{
+  text-align: end;
+  padding: .5em;
+}
+
+@media(max-width: 25rem){
+  .options-box{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .score-container{
+    flex-direction: column;
+   }
+}
+
+
+
+

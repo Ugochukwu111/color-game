@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="color-game.css">
+  <title>Color Game</title>
+</head>
+<body>
+
+               <!-- helps in placing the game in the middle -->
+  <div class="game-container-holder">
+    <!-- box displaying  the reacting emoji -->
+    <div class="emoji-reaction-box">
+      <p>you win</p>
+    </div>
+      <div class="score-container">
+        <h3 data-testid="gameInstructions">Guess the correct color!</h3>
+          <h4 data-testid="score">
+            Wins: 
+            <span class="score-num js-win">0</span>
+          </h4>
+          <h4>Loses:  <span class="score-num js-lose">0</span></h4>
+      </div>
+                       <!--===this div contians the entire game  -->
+    <div class="game-container">
+                      <!-- this div contains the target color -->
+      <div data-testid="colorBox" class="target-color-box">
+        <div class="target-clr-box"></div>
+      </div>
+  
+      <div class="options-box">
+        
+          <div onclick="clr1Box()" data-testid="colorOption" class="one-option-box clr-1"></div>
+          <div onclick="clr2Box()" data-testid="colorOption" class="one-option-box clr-2"></div>
+          <div onclick="clr3Box()" data-testid="colorOption" class="one-option-box clr-3"></div>
+          <div onclick="clr4Box()" data-testid="colorOption" class="one-option-box clr-4"></div>
+          <div onclick="clr5Box()" data-testid="colorOption" class="one-option-box clr-5"></div>
+          <div onclick="clr6Box()" data-testid="colorOption" class="one-option-box clr-6"></div>
+        
+      </div>
+       
+      <div class="button-box">
+        <button onclick="restartGame()" data-testid="newGameButton ">Restart</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="color-game.js"></script>
+</body>
+</html>

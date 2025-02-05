@@ -79,20 +79,20 @@ function playerChoice (box) {
     winEl.textContent = win; 
     emojiBox.style.fontSize= '5rem';
     emojiBox.textContent ='😇';
-    emojiBox.style.transform = 'translateY(0rem)';
+    emojiBox.style.transform = 'translateY(-18rem)';
     setTimeout(() => {
-       emojiBox.style.transform = 'translateY(18rem)'
-    },450)
+       emojiBox.style.transform = 'translateY(100%)'
+    },550)
   }else{
     lose++; //incremenets when the player  fails
     loseEl.textContent = lose;
     emojiBox.style.display = 'flex';
-    emojiBox.style.transform = 'translateY(0rem)';
+    emojiBox.style.transform = 'translateY(-18rem)';
     emojiBox.textContent = '😵';
     emojiBox.style.fontSize= '5rem';
     setTimeout(() => {
-       emojiBox.style.transform = 'translateY(18rem)'
-    },450)
+       emojiBox.style.transform = 'translateY(100%)'
+    },550)
     console.log('try again')
   }
   randomColor()  //changes color

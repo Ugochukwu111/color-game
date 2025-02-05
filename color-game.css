@@ -83,8 +83,9 @@ button:active{
   position:absolute;
   z-index: 999;
   right: 2rem;
-  transition: all 300ms ease;
-  transform: translateY(100rem);
+  bottom: 0;
+  transition: all 400ms ease;
+  transform: translateY(100%);
   
 }
 

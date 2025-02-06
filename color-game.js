@@ -26,12 +26,12 @@ let lose = 0;
 
 //this funnctioc creates three random numbers  so i can place it to get random colors
 function randomColor() {
- rand1 = Math.floor(Math.random() * 200) + 50;
- rand2 = Math.floor(Math.random() * 9) ;
- rand3 = Math.floor(Math.random() * 150) + 20;
- randnum = Math.floor(Math.random() * 6) + 1; // this random number will bw use to shuffle the correct color
-  color = `rgb(${rand1}, ${rand2}, ${rand3})`; // this is the target random color(correct one)
-  targetClrBox.style.backgroundColor = color;
+  rand1 = Math.floor(Math.random() * 200) + 50;
+  rand2 = Math.floor(Math.random() * 9) ;
+  rand3 = Math.floor(Math.random() * 150) + 20;
+  randnum = Math.floor(Math.random() * 6) + 1; // this random number will bw use to shuffle the correct color
+    color = `rgb(${rand1}, ${rand2}, ${rand3})`; // this is the target random color(correct one)
+    targetClrBox.style.backgroundColor = color;
 }
 randomColor()  //do not remove colors will lose randomness when game starts
 
@@ -42,9 +42,9 @@ function shuffleAllColours(){
 clr1.style.backgroundColor = `rgb(${rand2}, ${rand3}, ${rand1})`;
 clr2.style.backgroundColor = `rgb(${rand2}, ${rand1}, ${rand3})`;
 clr3.style.backgroundColor = `rgb(${rand3}, ${rand2}, ${rand1})`;
-clr4.style.backgroundColor = `rgb(${rand2}, ${rand1}, ${rand1})`;
-clr5.style.backgroundColor = `rgb(${rand2}, ${rand3}, ${rand3})`;
-clr6.style.backgroundColor = `rgb(${rand2}, ${rand1}, ${rand1})`;
+clr4.style.backgroundColor = `rgb(${225 - rand2}, ${225- rand1}, ${225 - rand1})`;
+clr5.style.backgroundColor = `rgb(${rand2 / 2}, ${rand3 * 20}, ${rand3 / 2})`;
+clr6.style.backgroundColor = `rgb(${rand2 * 1.2}, ${rand1 / 1.2}, ${rand1 * 10})`;
 }
 
 shuffleAllColours()//asigns from clr1 to clr 6 random colors
@@ -70,8 +70,8 @@ else if (randnum === 6) {
 shulfeRightcolor()
 
 
-//this function is used as a call back funtion
- //it performs the action when the user clicks on his chioce, it changes the target color irrespective 
+//this function is used as a reuseable funtion
+ //it performs the action when the user clicks on his/her chioce, it changes the target color irrespective 
  //of whether the user is right or wrong and diplay it
 function playerChoice (box) {
   if (box.style.backgroundColor === color && targetClrBox.style.backgroundColor === color) {
@@ -100,7 +100,7 @@ function playerChoice (box) {
   shulfeRightcolor() //make sure the right color is not repeated in same box
 }
 
-//reuseable function
+//callback function
 function clr1Box() {
     playerChoice(clr1)
 }
@@ -120,7 +120,7 @@ function clr6Box() {
   playerChoice(clr6)
 }
 
-// this function restarts the game score  and updates it
+// this function restarts the game scores  and updates it
 function restartGame() {
   win = 0;
   winEl.innerHTML = 0; 

@@ -11,14 +11,14 @@
                <!-- helps in placing the game in the middle -->
   <div class="game-container-holder">
     <!-- box displaying  the reacting emoji -->
-    <div class="emoji-reaction-box">
+    <div data-testid="gameStatus" class="emoji-reaction-box">
       <p>you win</p>
     </div>
       <div class="score-container">
         <h3 data-testid="gameInstructions">Guess the correct color!</h3>
           <h4 data-testid="score">
             Wins: 
-            <span class="score-num js-win">0</span>
+            <span data-testid="score" class="score-num js-win">0</span>
           </h4>
           <h4>Loses:  <span class="score-num js-lose">0</span></h4>
       </div>
@@ -41,7 +41,7 @@
       </div>
        
       <div class="button-box">
-        <button onclick="restartGame()" data-testid="newGameButton ">Restart</button>
+        <button onclick="restartGame()" data-testid="newGameButton">Restart</button>
       </div>
     </div>
   </div>
